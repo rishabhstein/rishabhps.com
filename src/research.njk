@@ -7,7 +7,7 @@ bodyClass: content-page publications-page
 <h1>Research Highlights</h1>
 <p class="more-link">For the full list of publications, <a href="/publications/">click here</a>.</p>
 
-<section class="publication-list" aria-label="Research results">
+<section class="publication-list research-list" aria-label="Research results">
   {% for research in collections.research | reverse %}
     <article class="publication-entry">
       <a class="publication-cover" href="{{ research.data.paper_url | default(research.url) }}" aria-label="{{ research.data.title }}">

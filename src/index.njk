@@ -5,47 +5,47 @@ bodyClass: content-page home-page
 ---
 
 <section class="home-hero" id="home" aria-labelledby="home-title">
-  <figure class="portrait-panel">
-    <img src="/assets/images/me.jpeg" alt="Portrait of Rishabh P. Sharma.">
-  </figure>
+  <p class="lede">Welcome to the web page of Dr. Sharma. He is an interdisciplinary scientists with a PhD in Physics with expertise in reactive transport processes where I combine experiments, field work and computer modelling to study pattern forming process. I study pattern formation, reactive transport, and nonlinear dynamics in geophysical and physicochemical systems.</p>
 
-  <div class="home-copy">
-    <h2 id="home-title">About Me:</h2>
-    <p><strong>Post doctorate Researcher.</strong></p>
+  <div class="profile-card">
+    <figure class="portrait-panel">
+      <img src="/assets/images/me.jpeg" alt="Portrait of Rishabh P. Sharma.">
+    </figure>
 
-    <p class="profile-affiliation">
-    Nonlinear Physical Chemisty Unit <br>
-    Universite libre de Bruxelles, Brussels
-    </p>
-
-    <dl class="profile-details">
-      <div>
-        <dt>Email</dt>
-        <dd><a href="mailto:rishabh.sharma@ulb.be">rishabh.sharma [at] ulb.be</a></dd>
+    <div class="profile-card-copy">
+      <div class="profile-identity">
+        <h2 id="home-title">Dr. Rishabh P. Sharma</h2>
+        <p><strong>Postdoctoral Researcher</strong></p>
+        <p class="profile-affiliation">Nonlinear Physical Chemistry Unit<br>Universite libre de Bruxelles, Brussels</p>
       </div>
-      <div>
-        <dt>Address</dt>
-        <dd>ULB, Campus La Plaine, NO Building, <br>
-         Office: 2. 0.5 212 5th floor</dd>
+      <dl class="profile-details">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:rishabh.sharma@ulb.be">rishabh.sharma [at] ulb.be</a></dd>
+        </div>
+        <div>
+          <dt>Address</dt>
+          <dd>ULB, Campus La Plaine, NO Building, <br>
+           Office: 2. 0.5 212 5th floor</dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd>+324 57 92 82</dd>
+        </div>
+      </dl>
+      <div class="hero-actions">
+        <a href="/about/">About</a>
+        <a href="/assets/files/rps_Academic_CV.pdf">CV</a>
+        <a href="#recent-research">Google Scholar</a>
+        <a href="/research/">Orcid</a>
       </div>
-      <div>
-        <dt>Phone</dt>
-        <dd>+324 57 92 82</dd>
-      </div>
-    </dl>
-    <p class="lede">I study how materials respond when pressure, temperature, and structure compete. This website collects my research work, academic profile, publication notes, and activity posts.</p>
-    <div class="hero-actions">
-      <a href="/assets/files/rps_Academic_CV.pdf">CV</a>
-      <a href="#recent-research">Google Scholar</a>
-      <a href="/research/">Orcid</a>
     </div>
   </div>
 </section>
 
 <section class="section" id="recent-research" aria-labelledby="recent-research-title">
   <div class="section-heading">
-    <p class="eyebrow">Research</p>
-    <h2 id="recent-research-title">Research Highlight</h2>
+    <h2 id="recent-research-title">Research Highlights</h2>
   </div>
   <p class="more-link">For the full list of research summaries, <a href="/research/">click here</a>.</p>
   <div class="publication-list">
@@ -75,15 +75,6 @@ bodyClass: content-page home-page
   <div class="section-heading">
     <p class="eyebrow">Activities</p>
     <h2 id="activities-title">Latest Updates</h2>
-    <p>Short notes and activity updates.</p>
   </div>
-  <div class="post-list">
-    {% for post in collections.post | reverse %}
-    {% if loop.index < 2 %}
-      <article class="post-list-item">
-        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-      </article>
-    {% endif %}
-    {% endfor %}
-  </div>
+  {% include './updates.njk' %}
 </section>
