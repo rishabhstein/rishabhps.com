@@ -18,6 +18,6 @@ The source page lives at `src/index.njk`. Static files live in `assets/` and are
 ## Customize
 
 - Replace placeholder publication titles with real citations and DOI links.
-- Update `mailto:hello@rishabhps.com` with the preferred academic email.
+- Update `mailto:---` with the preferred academic email.
 - Add ORCID, Google Scholar, GitHub, and institutional profile links in the contact section.
 >>>>>>> f84326b (first commit)
