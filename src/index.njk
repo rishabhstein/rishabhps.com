@@ -12,10 +12,10 @@ bodyClass: content-page home-page
   <div class="home-copy">
     <h2 id="home-title">About Me:</h2>
     <p><strong>Post doctorate Researcher.</strong></p>
-    
+
     <p class="profile-affiliation">
     Nonlinear Physical Chemisty Unit <br>
-    Universite libre de Bruxelles, Brussels    
+    Universite libre de Bruxelles, Brussels
     </p>
 
     <dl class="profile-details">
@@ -50,7 +50,7 @@ bodyClass: content-page home-page
   <p class="more-link">For the full list of research summaries, <a href="/research/">click here</a>.</p>
   <div class="publication-list">
     {% for research in collections.research | reverse %}
-      {% if loop.index <= 3 %}
+      {% if loop.index <= 1 %}
         <article class="publication-entry">
           <a class="publication-cover" href="{{ research.data.paper_url | default('/research/') }}" aria-label="{{ research.data.title }}">
             <img src="{{ research.data.cover | default('/assets/images/disspattern.jpg') }}" alt="{{ research.data.title }} cover image.">
