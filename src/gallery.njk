@@ -1,0 +1,29 @@
+---
+title: Gallery
+layout: 'base.njk'
+---
+
+<br>
+<h1 id="gallery-title">Gallery</h1>
+  
+
+<section class="gallery-list" aria-label="Gallery posts">
+  {% for item in collections.gallery | reverse %}
+    <article class="gallery-item">
+     
+      <h2>{{ item.data.title }}</h2>
+        {% if item.data.caption %}
+          <figcaption>{{ item.data.caption }}</figcaption>
+        {% endif %}
+
+      <figure class="gallery-thumb">
+        <img src="{{ item.data.cover }}" alt="{{ item.data.title }} cover image.">
+      </figure>
+
+      <div class="gallery-preview">
+        {{ item.templateContent | safe }}
+      </div>
+
+    </article>
+  {% endfor %}
+</section>

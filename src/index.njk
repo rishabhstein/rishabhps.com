@@ -1,0 +1,89 @@
+---
+title: Rishabh P. Sharma
+layout: 'base.njk'
+bodyClass: content-page home-page
+---
+
+<section class="home-hero" id="home" aria-labelledby="home-title">
+  <figure class="portrait-panel">
+    <img src="/assets/images/me.jpeg" alt="Portrait of Rishabh P. Sharma.">
+  </figure>
+
+  <div class="home-copy">
+    <h2 id="home-title">About Me:</h2>
+    <p><strong>Post doctorate Researcher.</strong></p>
+    
+    <p class="profile-affiliation">
+    Nonlinear Physical Chemisty Unit <br>
+    Universite libre de Bruxelles, Brussels    
+    </p>
+
+    <dl class="profile-details">
+      <div>
+        <dt>Email</dt>
+        <dd><a href="mailto:rishabh.sharma@ulb.be">rishabh.sharma [at] ulb.be</a></dd>
+      </div>
+      <div>
+        <dt>Address</dt>
+        <dd>ULB, Campus La Plaine, NO Building, <br>
+         Office: 2. 0.5 212 5th floor</dd>
+      </div>
+      <div>
+        <dt>Phone</dt>
+        <dd>+324 57 92 82</dd>
+      </div>
+    </dl>
+    <p class="lede">I study how materials respond when pressure, temperature, and structure compete. This website collects my research work, academic profile, publication notes, and activity posts.</p>
+    <div class="hero-actions">
+      <a href="/assets/files/rps_Academic_CV.pdf">CV</a>
+      <a href="#recent-research">Google Scholar</a>
+      <a href="/research/">Orcid</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="recent-research" aria-labelledby="recent-research-title">
+  <div class="section-heading">
+    <p class="eyebrow">Research</p>
+    <h2 id="recent-research-title">Research Highlight</h2>
+  </div>
+  <p class="more-link">For the full list of research summaries, <a href="/research/">click here</a>.</p>
+  <div class="publication-list">
+    {% for research in collections.research | reverse %}
+      {% if loop.index <= 3 %}
+        <article class="publication-entry">
+          <a class="publication-cover" href="{{ research.data.paper_url | default('/research/') }}" aria-label="{{ research.data.title }}">
+            <img src="{{ research.data.cover | default('/assets/images/disspattern.jpg') }}" alt="{{ research.data.title }} cover image.">
+          </a>
+          <div class="publication-summary">
+            <h2><a href="{{ research.data.paper_url | default('/research/') }}">{{ research.data.title }}</a></h2>
+            <div class="publication-preview">
+              {{ research.templateContent | safe }}
+            </div>
+            {% if research.data.paper_url and research.data.paper_citation %}
+              <p class="paper-list-link">Read our paper <a href="{{ research.data.paper_url }}">{{ research.data.paper_citation }}</a>.</p>
+            {% endif %}
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+
+<section class="section" id="activities" aria-labelledby="activities-title">
+  <div class="section-heading">
+    <p class="eyebrow">Activities</p>
+    <h2 id="activities-title">Latest Updates</h2>
+    <p>Short notes and activity updates.</p>
+  </div>
+  <div class="post-list">
+    {% for post in collections.post | reverse %}
+    {% if loop.index < 2 %}
+      <article class="post-list-item">
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>

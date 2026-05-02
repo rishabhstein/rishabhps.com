@@ -1,0 +1,25 @@
+---
+layout: 'base.njk'
+---
+
+<article class="publication-page">
+  <header class="publication-header">
+    <h1>{{ title }}</h1>
+  </header>
+
+  {% if cover %}
+    <figure class="publication-figure">
+      <img src="{{ cover }}" alt="{{ title }} cover image.">
+    </figure>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  {% if paper_url and paper_citation %}
+    <p class="paper-link">Read our paper <a href="{{ paper_url }}">{{ paper_citation }}</a>.</p>
+  {% endif %}
+
+  <p class="publication-back-link"><a href="/publications/">Back to publications</a></p>
+</article>

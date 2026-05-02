@@ -1,0 +1,27 @@
+---
+title: Research
+layout: 'base.njk'
+bodyClass: content-page publications-page
+---
+
+<h1>Research Highlights</h1>
+<p class="more-link">For the full list of publications, <a href="/publications/">click here</a>.</p>
+
+<section class="publication-list" aria-label="Research results">
+  {% for research in collections.research | reverse %}
+    <article class="publication-entry">
+      <a class="publication-cover" href="{{ research.data.paper_url | default(research.url) }}" aria-label="{{ research.data.title }}">
+        <img src="{{ research.data.cover | default('/assets/images/disspattern.jpg') }}" alt="{{ research.data.title }} cover image.">
+      </a>
+      <div class="publication-summary">
+        <h2><a href="{{ research.data.paper_url | default(research.url) }}">{{ research.data.title }}</a></h2>
+        <div class="publication-preview">
+          {{ research.templateContent | safe }}
+        </div>
+        {% if research.data.paper_url and research.data.paper_citation %}
+          <p class="paper-list-link">Read our paper <a href="{{ research.data.paper_url }}">{{ research.data.paper_citation }}</a>.</p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>

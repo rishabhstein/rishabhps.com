@@ -1,0 +1,23 @@
+---
+    layout: 'base.njk'
+---
+
+<article class="post-page">
+  <header class="post-header">
+    <p class="eyebrow">Activity</p>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  {% if paper_url and paper_citation %}
+    <p class="paper-link">Read our paper <a href="{{ paper_url }}">{{ paper_citation }}</a>.</p>
+  {% endif %}
+
+  <footer class="post-footer">
+    <a href="/activities/">All activities</a>
+    <a href="mailto:sigmarootpi@proton.me?subject=Activity: {{ title }}">Reply via email</a>
+  </footer>
+</article>
