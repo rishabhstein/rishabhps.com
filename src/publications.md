@@ -8,6 +8,8 @@ bodyClass: content-page publications-page
 
 ## Journal Articles
 
+- Deng, J., **Sharma, R. P.**, Szymczak, P., Kang, P. K. (2025). *Anomalous transport in dissolving porous media: Transitions between Fickian and non-Fickian regimes*, Geophysical Research Letters, 52, e2025GL115940. [DOI](https://doi.org/10.1029/2025GL115940)
+
 - **Rishabh P. Sharma**, Jingxuan Deng, [Peter K. Kang](https://pkkang.com/home/), [Piotr Szymczak](https://www.fuw.edu.pl/~piotrek), *Effects of mixing at pore intersections on large-scale dissolution patterns and solute transport*, *Geophysical Research Letters*, 2023. [DOI](https://doi.org/10.1029/2023GL105183)
 
 - **Rishabh P. Sharma**, Mariusz Bialecki, Max P. Cooper, Andrzej P. Radlinski, [Piotr Szymczak](https://www.fuw.edu.pl/~piotrek), *Comparative study of undissolved and karstified limestone based on microtomography*, *Chemical Geology*, 2023, Volume 627, 121397. [DOI](https://doi.org/10.1016/j.chemgeo.2023.121397)
