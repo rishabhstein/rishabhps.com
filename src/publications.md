@@ -8,6 +8,10 @@ bodyClass: content-page publications-page
 
 ## Journal Articles
 
+- **Rishabh P. Sharma**, Max P. Cooper, Michal Dzikowski, Piotr Szymczak, *Geometric Characterization of Wormhole Shape in Core Dissolution and the Influence of Rock Structures*, (Ready to be submitted in *Advances in Water Resources*)
+
+- **Rishabh P. Sharma**, Gabor Schuszter, Anne De Wit, *Experimental investigation of SrCO3 phyllotactic precipitation patterns in Hele-Shaw cell.* (In-preparation)
+
 - Deng, J., **Sharma, R. P.**, Szymczak, P., Kang, P. K. (2025). *Anomalous transport in dissolving porous media: Transitions between Fickian and non-Fickian regimes*, Geophysical Research Letters, 52, e2025GL115940. [[PDF](/assets/files/GRL2025.pdf)] [[DOI](https://doi.org/10.1029/2025GL115940)]
 
 - **Rishabh P. Sharma**, Jingxuan Deng, Peter K. Kang, Piotr Szymczak, *Effects of mixing at pore intersections on large-scale dissolution patterns and solute transport*, *Geophysical Research Letters*, 2023.[[PDF](/assets/files/GRL2023.pdf)] [[DOI](https://doi.org/10.1029/2023GL105183)]
