@@ -655,11 +655,16 @@ main,
 
 .gallery-thumb {
   margin: 0;
+  container-type: inline-size;
 }
 
+/* Fixed height = a 16:9 image at 70% width; others rescale to it.
+   Portrait images are cropped to a square, wider-than-16:9 ones to 16:9. */
 .gallery-thumb img {
-  width: 70%;
-  aspect-ratio: 16 / 9;
+  height: calc(70cqi * 9 / 16);
+  width: auto;
+  min-width: calc(70cqi * 9 / 16);
+  max-width: 70%;
   object-fit: cover;
 }
 
